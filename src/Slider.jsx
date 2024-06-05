@@ -14,9 +14,12 @@ import character4 from "./assets/portrait-woman-representing-aquarius-zodiac-sig
 const Slider = () => {
   const images = [character1, character2, character3, character4];
   const paginationTexts = ["Office Wear", "Street Look", "Casual", "Dress"];
-  const dexcriptionTexts = ["", "Street Look Description", "Casual Description", "Dress Description"];
+  const descriptionTexts = ["Office wear varies from formal suits and ties to casual jeans and tops, depending on the workplace, with styles ranging from business formal to business casual and casual attire.", "Street look features trendy, casual outfits like graphic tees, ripped jeans, sneakers, and statement accessories, blending comfort with urban style, often influenced by current fashion trends and pop culture.", "Casual wear emphasizes comfort and relaxation, featuring items like jeans, t-shirts, sweaters, and sneakers. It's versatile for everyday activities, reflecting a laid-back and effortless style suitable for various occasions.", "A dress is a one-piece garment for women, available in various styles and lengths, from casual sundresses to formal evening gowns, offering versatility for different occasions and personal expressions."];
   const [currentPaginationText, setCurrentPaginationText] = useState(
     paginationTexts[0]
+  );
+  const [currentDescriptionText, setCurrentDescriptionText] = useState(
+    descriptionTexts[0]
   );
   return (
     <section className=" mt-10 mx-4 sm:mx-8 md:mx-20 lg:mx-36 z-10">
@@ -46,8 +49,7 @@ const Slider = () => {
                     {currentPaginationText}
                 </p>
                 <p className="text-white">
-                  A classic red dress with a modern twist. Perfect for any
-                  occasion.
+                 {descriptionTexts[index]}
                 </p>
                 {/* <div className="text-white text-2xl bg-gradient-to-r from-indigo-500 py-2 my-2 rounded">
                   {currentPaginationText}
